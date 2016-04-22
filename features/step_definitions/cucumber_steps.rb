@@ -27,3 +27,9 @@ module CucumberHelper
 end
 
 World(CucumberHelper)
+
+
+Before do
+  write_file('features/support/env.rb', "require 'cucumber/nested_steps'")
+end
+
